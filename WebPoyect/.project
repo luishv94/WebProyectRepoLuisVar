@@ -3,6 +3,7 @@
 	<name>WebPoyect</name>
 	<comment></comment>
 	<projects>
+		<project>Tarea</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
