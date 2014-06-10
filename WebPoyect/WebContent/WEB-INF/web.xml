@@ -23,7 +23,7 @@
     <description></description>
     <display-name>AgregarTareaServlet</display-name>
     <servlet-name>AgregarTareaServlet</servlet-name>
-    <servlet-class>AgregarTareaServlet</servlet-class>
+    <servlet-class>kaban.AgregarTareaServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AgregarTareaServlet</servlet-name>
