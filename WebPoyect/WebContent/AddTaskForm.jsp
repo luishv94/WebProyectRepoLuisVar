@@ -8,6 +8,18 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<script>
+
+function alertMessage(alert_msg){
+	var alert_msg="Message:"+msg;
+	alert(alert_msg);
+}
+
+alert("Antes del usar el Copyright");
+
+</script>
+
 <%--Esto es un comentario JSP --%>
 <!-- Esto es un comentario HTML -->
 <%--http://localhost:8080/WebPoyect/AddTaskForm.jsp?test=hi --%>
@@ -23,12 +35,17 @@ values[0]="test";
 values[1]="test1";
 values[2]="test2";
 
-for(String value:values)
+
+for(String value:values){
 out.println("<div>"+value+"</div>");
+}
 %>
 
 <%--La linea 31 y la linea 17 son iguales --%>
-<%= "Hello World"+new Date().toString()%>
+<%="Hello World"+new Date().toString()%>
 
+<script>
+alertMesagge("Despues de fecha");
+</script>
 </body>
 </html>

@@ -39,21 +39,25 @@ public class AgregarTareaServlet extends HttpServlet {
 				+"<input type=\"text\" name=\"Titulo\"/>"
 				+"</td>"
 				+"</tr>"
+				+"<tr>"
 				+"<td>Categoria:</td>"
 				+"<td>"
 				+"<input type=\"text\" name=\"Categoria\"/>"
 				+"</td>"
 				+"</tr>"
+				+"<tr>"
 				+"<td>Propietario:</td>"
 				+"<td>"
 				+"<input type=\"text\" name=\"Propietario\"/>"
 				+"</td>"
 				+"</tr>"
+				+"<tr>"
 				+"<td>Descripcion:</td>"
 				+"<td>"
 				+"<input type=\"text\" name=\"Descripcion\"/>"
 				+"</td>"
 				+"</tr>"
+				+"<tr>"
 				+"<td>Fecha de Entrega:</td>"
 				+"<td>"
 				+"<input type=\"text\" name=\"FechaDeEntrega\"/>"
@@ -101,6 +105,15 @@ public class AgregarTareaServlet extends HttpServlet {
 
 		Tarea task = new Tarea();
 		PrintWriter writer = response.getWriter();
+		
+		/*State est=State.DO_TO;
+		if(request.getParameter("Estado").equals("IN_PROCESS")){
+			est=State.IN_PROCESS;
+		}else if(request.getParameter("Estado").equals("DONE")){
+			est=State.DONE;
+		}else if(request.getParameter("Estado").equals("BACKLOG")){
+			est=State.BACKLOG;
+		}*/
 
 		task.setTitulo(request.getParameter("Titulo"));
 		task.setCategoria(request.getParameter("Categoria"));
@@ -114,7 +127,7 @@ public class AgregarTareaServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		try {
-			task.setPriority(Short.parseShort(request.getParameter("priority")));
+			task.setPriority(Integer.parseInt(request.getParameter("Prioridad")));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
